@@ -9,4 +9,10 @@ public class CursoModel{
         Modalidade = modalidade;
         Id =  Guid.NewGuid();
     }
+
+    public Guid Id { get; set; }
+    public string NomeCurso { get; set; }
+    public string Descricao { get; set; }
+    public string Duracao { get; set; }
+    public string Modalidade { get; set; }
 }
