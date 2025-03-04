@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 
 using Cursosufc.Models;
 
-namespace TaskApi.Data;
+namespace Cursosufc.Data;
 
 public class CursoContext: DbContext {
      public DbSet<CursoModel> Curso { get; set; }
