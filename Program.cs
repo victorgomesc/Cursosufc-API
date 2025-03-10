@@ -30,7 +30,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-<DivideByZeroException>
 
 app.MapControllers();
 app.UseCors("AllowAllOrigins");
