@@ -24,6 +24,19 @@ public static class CursoRoute {
             return Results.Ok(curso);
         });
 
+        route.MapGet("{id:guid}", async (Guid id, CursoContext context) =>
+        {
+            var curso = await context.Curso.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (curso == null)
+            {
+                return Results.NotFound(new { message = "Curso não encontrado" });
+            }
+
+        return Results.Ok(curso);
+        });
+
+
         route.MapPut("{id:guid}", async (Guid id, CursoRequest req, CursoContext context) => 
         {
             var curso = await context.Curso.FirstOrDefaultAsync(x => x.Id == id);
